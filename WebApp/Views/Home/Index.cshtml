@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@*LANDING SECTION*@
+<section>
+    <div class="bg-landing">
+        <div class="row">
+            <div class="col-12 title-section-landing">
+                <h1 class="title-sections text-white">
+                    Welcome to <br />Online Market!                 
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br />
+
+@*PRODUCTS/ORDERS SECTION*@
+<section class="container">
+
+    <h3 class="title-section-products">What are you interested in?</h3>
+
+    <br />
+
+    <div class="row">
+        <div class="title-sections d-flex">
+
+            <div class="col-6 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-black">Products</h2>
+                        <h4 class="text-black">Access to the products crud</h4>
+                    </div>
+                    <div class="card-footer clearfix">
+                        <a asp-controller="Products" asp-action="Index" class="btn btn-primary">Go!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 m-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-black">Orders</h2>
+                        <h4 class="text-black">Access to orders</h4>
+                    </div>
+                    <div class="card-footer clearfix">
+                        <a asp-controller="Products" asp-action="List" class="btn btn-primary">Go!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br />
+<br />
+
+@*MAP SECTION*@
+<section>
+    <div class="row">
+        <div class="title-sections">
+            <div class="col-12">
+                <h3 class="text-black">Where to find us?</h3>
+
+                <br />
+        
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016888186447!2d-58.384145325479224!3d-34.60373445749695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1684502805854!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>

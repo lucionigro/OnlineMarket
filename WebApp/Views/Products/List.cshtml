@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebApp.Data.Product>
+
+@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.Cart.Count > 0)
+{
+    <div class="row" id="cartcard">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3>
+                        Items in <i class="bi bi-cart3"></i> :
+                        <span>
+                            @ViewBag.Cart.Count
+                        </span>
+                    </h3>
+                    @Html.ActionLink("Finish shopping", "Expand", new {}, new { @class="btn btn-success"})
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<div class="container">
+    <br />
+
+    <h1>Products</h1>
+
+    <br />
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-4 p-4">
+                <div class="card">
+                    <div class="card-body ">
+                        <h2 style="font-size:28px; font-weight:500;">
+                            <span>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </span>
+                        </h2>
+                        <h4 style="font-size:20px; font-weight:400;">
+                            <span>
+                                @Html.DisplayFor(modelItem => item.Description) 
+                            </span>
+                        </h4>
+                        <br/>
+                        <h5 style="font-weight:300;">
+                            <span>
+                                @Html.DisplayFor(modelItem => item.Price) USD
+                            </span>
+                        </h5>
+                    </div>
+                    <div class="card-footer clearfix">
+                        @Html.ActionLink("Add to Cart", "AddToCart", new { id = item.Id}, new { @class="btn btn-primary btn-sm"})
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    #cartcard {
+        text-align: center;
+        position: center;
+    }
+</style>

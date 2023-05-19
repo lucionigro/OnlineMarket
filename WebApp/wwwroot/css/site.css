@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,400&display=swap');
+
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+    /*overflow:hidden;*/
+    overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/*@*LANDING SECTION*@ */
+.title-sections, .card {
+    text-align: center;
+    position: center;
+}
+
+.title-section-landing {
+    padding-top:80px;
+    padding-bottom:80px;
+}
+
+.bg-landing {
+    background-image: url('../images/homephoto.jpg');
+    object-fit: contain;
+    max-width: 100%;
+    background-color: #202020;
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+}
+
+/*@*PRODUCTS/ORDERS SECTION*@ */
+.bg-grey {
+   
+}
+.title-section-products {
+    padding-top: 20px;
+    text-align: center;
+    position: center;
+    color: black;
+}
+
+.card {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+}
+
